@@ -1,0 +1,26 @@
+/* ========== Base & Variables ========== */
+
+:root {
+  --bg-main: #2f3328;
+  --board-bg: #d6b37a;
+  --poster-bg: #f7ecd0;
+  --pin-red: #c0392b;
+  --accent-teal: #3b7f7a;
+  --accent-gold: #e0b14a;
+  --header-text: #f5e6c8;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  background: var(--bg-main);
+  color: #333;
+}
+
+.hidden {
+  display: none !important;
+}

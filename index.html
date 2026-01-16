@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>IKPC Town Board</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="assets/css/base.css" />
+  <link rel="stylesheet" href="assets/css/header.css" />
+  <link rel="stylesheet" href="assets/css/layout.css" />
+  <link rel="stylesheet" href="assets/css/sidebar.css" />
+  <link rel="stylesheet" href="assets/css/poster.css" />
+  <link rel="stylesheet" href="assets/css/avatar.css" />
+  <link rel="stylesheet" href="assets/css/modal.css" />
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <h1>
+      <img src="assets/images/logo.svg" alt="IKPC Logo" class="header-logo" />
+      IKPC Town Board
+    </h1>
+    <p>Meet the townsfolk of our programming club</p>
+  </header>
+
+  <!-- Town Board -->
+  <main class="board-wrapper">
+    <!-- Side Info Panel -->
+    <aside class="side-panel">
+      <div class="panel-card">
+        <h3>📋 Town Stats</h3>
+        <div class="detail-stats">
+          <div class="detail-stat-item">
+            <span class="detail-stat-label">👥 Total Townsfolk:</span>
+            <span class="detail-stat-value" id="detail-total">0</span>
+          </div>
+          <div class="detail-stat-item">
+            <span class="detail-stat-label">👔 Male Members:</span>
+            <span class="detail-stat-value" id="detail-male">0</span>
+          </div>
+          <div class="detail-stat-item">
+            <span class="detail-stat-label">👗 Female Members:</span>
+            <span class="detail-stat-value" id="detail-female">0</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="panel-card">
+        <h3>📜 Town Log</h3>
+        <div class="log-entry">
+          <span class="log-date">Recent</span>
+          <p id="newest-member">Waiting for first member...</p>
+        </div>
+      </div>
+      
+      <div class="panel-card">
+        <h3>⚡ Town Ranks</h3>
+        <div class="rank-info">
+          <div class="rank-bar">
+            <div class="rank-fill" id="rank-fill"></div>
+          </div>
+          <p class="rank-text" id="rank-text">Village</p>
+        </div>
+      </div>
+    </aside>
+   
+    <section id="board" class="board"></section>
+  </main>
+
+  <!-- Modal -->
+  <div id="modal-overlay" class="modal-overlay hidden">
+    <div class="modal">
+      <button class="modal-close">✕</button>
+
+      <div class="modal-avatar"></div>
+      <h2 class="modal-name"></h2>
+      <a class="modal-github" href="#" target="_blank"></a>
+      <p class="modal-quote"></p>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="assets/js/dom.js"></script>
+  <script src="assets/js/validation.js"></script>
+  <script src="assets/js/stats.js"></script>
+  <script src="assets/js/avatar.js"></script>
+  <script src="assets/js/poster.js"></script>
+  <script src="assets/js/modal.js"></script>
+  <script src="assets/js/loader.js"></script>
+</body>
+</html>

@@ -1,0 +1,249 @@
+/* ========== Avatar System ========== */
+
+.avatar {
+  --hair-color: #6b4f2a;
+  --shirt-color: #4a90e2;
+  position: relative;
+  width: 64px;
+  height: 64px;
+}
+
+.poster:hover .avatar .eyes {
+  animation: blink 2s ease-in-out infinite;
+}
+
+@keyframes blink {
+  0%, 90%, 100% { transform: scaleY(1); }
+  95% { transform: scaleY(0.1); }
+}
+
+/* ========== Head ========== */
+
+.avatar .body {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  width: 48px;
+  height: 48px;
+  z-index: 1;
+}
+
+.avatar.male .body {
+  border-radius: 10px;
+  background: #e0ac69;
+}
+
+.avatar.female .body {
+  border-radius: 18px;
+  background: #f1c27d;
+}
+
+/* ========== Hair ========== */
+
+.avatar .hair {
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  width: 52px;
+  background: var(--hair-color);
+  z-index: 3;
+}
+
+.avatar.male .hair {
+  height: 20px;
+  border-radius: 12px 12px 8px 8px;
+}
+
+.avatar.female .hair {
+  height: 24px;
+  border-radius: 16px 16px 12px 12px;
+}
+
+.avatar.female .hair::before,
+.avatar.female .hair::after {
+  content: "";
+  position: absolute;
+  top: 18px;
+  width: 12px;
+  height: 18px;
+  background: var(--hair-color);
+  border-radius: 8px;
+}
+
+.avatar.female .hair::before {
+  left: -6px;
+}
+
+.avatar.female .hair::after {
+  right: -6px;
+}
+
+/* ========== Eyes ========== */
+
+.avatar .eyes {
+  position: absolute;
+  top: 30px;
+  left: 22px;
+  width: 20px;
+  height: 6px;
+  z-index: 2;
+}
+
+.avatar.female .eyes {
+  top: 32px;
+}
+
+.avatar .eyes::before,
+.avatar .eyes::after {
+  content: "";
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: #222;
+  border-radius: 50%;
+}
+
+.avatar .eyes::before {
+  left: 0;
+}
+
+.avatar .eyes::after {
+  right: 0;
+}
+
+.avatar.eyes-happy .eyes::before,
+.avatar.eyes-happy .eyes::after {
+  width: 6px;
+  height: 3px;
+  border-radius: 0 0 6px 6px;
+}
+
+.avatar.eyes-sleepy .eyes::before,
+.avatar.eyes-sleepy .eyes::after {
+  height: 2px;
+  border-radius: 2px;
+}
+
+.avatar.eyes-wide .eyes::before,
+.avatar.eyes-wide .eyes::after {
+  width: 5px;
+  height: 5px;
+}
+
+.avatar.eyes-wink .eyes::after {
+  width: 6px;
+  height: 2px;
+  border-radius: 2px;
+}
+
+/* ========== Nose ========== */
+
+.avatar .nose {
+  position: absolute;
+  top: 36px;
+  left: 30px;
+  width: 4px;
+  height: 4px;
+  background: rgba(0, 0, 0, 0.25);
+  border-radius: 50%;
+  z-index: 2;
+}
+
+/* ========== Mouth ========== */
+
+.avatar .mouth {
+  position: absolute;
+  top: 40px;
+  left: 26px;
+  width: 12px;
+  height: 2px;
+  background: rgba(0, 0, 0, 0.35);
+  border-radius: 2px;
+  z-index: 2;
+}
+
+.avatar.female .mouth {
+  top: 42px;
+}
+
+.avatar.mouth-smile .mouth {
+  width: 10px;
+  height: 5px;
+  background: transparent;
+  border: 2px solid rgba(0, 0, 0, 0.4);
+  border-top: none;
+  border-radius: 0 0 10px 10px;
+  left: 27px;
+  top: 39px;
+}
+
+.avatar.female.mouth-smile .mouth {
+  top: 41px;
+}
+
+.avatar.mouth-happy .mouth {
+  width: 12px;
+  height: 6px;
+  background: transparent;
+  border: 2px solid rgba(0, 0, 0, 0.4);
+  border-top: none;
+  border-radius: 0 0 12px 12px;
+  left: 26px;
+  top: 38px;
+}
+
+.avatar.female.mouth-happy .mouth {
+  top: 40px;
+}
+
+.avatar.mouth-surprised .mouth {
+  width: 6px;
+  height: 6px;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 50%;
+  left: 29px;
+  top: 40px;
+}
+
+.avatar.female.mouth-surprised .mouth {
+  top: 42px;
+}
+
+.avatar.mouth-sad .mouth {
+  width: 10px;
+  height: 5px;
+  background: transparent;
+  border: 2px solid rgba(0, 0, 0, 0.4);
+  border-bottom: none;
+  border-radius: 10px 10px 0 0;
+  left: 27px;
+  top: 43px;
+}
+
+.avatar.female.mouth-sad .mouth {
+  top: 45px;
+}
+
+/* ========== Clothes ========== */
+
+.avatar .clothes {
+  position: absolute;
+  bottom: 2px;
+  left: 12px;
+  width: 40px;
+  height: 30px;
+  background: var(--shirt-color);
+  border-radius: 0 0 8px 8px;
+  z-index: 0;
+}
+
+.avatar .clothes::before {
+  content: "";
+  position: absolute;
+  top: -8px;
+  left: 14px;
+  width: 12px;
+  height: 8px;
+  background: #edb98a;
+  border-radius: 0 0 6px 6px;
+}

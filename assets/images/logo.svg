@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <!-- Shield background -->
+  <path fill="#1e3a5f" d="M256 32c-80 0-120 40-120 80v160c0 120 120 200 120 200s120-80 120-200V112c0-40-40-80-120-80z"/>
+  <path fill="#2c4f7c" stroke="#d4a029" stroke-width="8" d="M256 48c-72 0-108 36-108 72v152c0 108 108 180 108 180s108-72 108-180V120c0-36-36-72-108-72z"/>
+  
+  <!-- Code symbol -->
+  <path fill="#d4a029" stroke="#1e3a5f" stroke-width="6" stroke-linejoin="round" d="M200 200l-40 40 40 40m112-80l40 40-40 40m-48-120l-32 160"/>
+  
+  <!-- Eagle -->
+  <g transform="translate(256, 80)" fill="#d4a029" stroke="#1e3a5f" stroke-width="3">
+    <!-- Body -->
+    <ellipse cx="0" cy="0" rx="20" ry="28"/>
+    <!-- Head -->
+    <circle cx="0" cy="-20" r="12"/>
+    <!-- Beak -->
+    <path d="M0,-24 l8,-4 l-8,4 z"/>
+    <!-- Wings -->
+    <path d="M-20,0 q-25,-15 -35,-8 q-8,6 -5,12 q10,-5 40,0 z"/>
+    <path d="M20,0 q25,-15 35,-8 q8,6 5,12 q-10,-5 -40,0 z"/>
+  </g>
+  
+  <!-- Ribbon -->
+  <path fill="#2c4f7c" stroke="#d4a029" stroke-width="3" d="M120 160 Q100 140 80 165 L110 180 Z M392 160 Q412 140 432 165 L402 180 Z M120 180 Q256 155 392 180 Q256 205 120 180 Z"/>
+  
+  <!-- Flames left -->
+  <path fill="#d4a029" stroke="#1e3a5f" stroke-width="2" d="M90 120 Q85 100 75 120 Q70 140 75 160 Q80 140 85 140 Q90 140 90 120 Z"/>
+  <path fill="#d4a029" stroke="#1e3a5f" stroke-width="2" d="M110 100 Q105 80 95 100 Q90 120 95 140 Q100 120 105 120 Q110 120 110 100 Z"/>
+  
+  <!-- Flames right -->
+  <path fill="#d4a029" stroke="#1e3a5f" stroke-width="2" d="M422 120 Q427 100 437 120 Q442 140 437 160 Q432 140 427 140 Q422 140 422 120 Z"/>
+  <path fill="#d4a029" stroke="#1e3a5f" stroke-width="2" d="M402 100 Q407 80 417 100 Q422 120 417 140 Q412 120 407 120 Q402 120 402 100 Z"/>
+</svg>
