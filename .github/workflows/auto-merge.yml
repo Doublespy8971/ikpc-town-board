@@ -35,7 +35,7 @@ jobs:
             fi
           fi
 
-      - name: Auto-approve and merge
+      - name: Auto-merge
         if: steps.conflict-check.outputs.no_conflict == 'true'
         uses: actions/github-script@v7
         with:
@@ -43,16 +43,7 @@ jobs:
           script: |
             const pr = context.payload.pull_request;
             
-            // Auto-approve
-            await github.rest.pulls.createReview({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              pull_number: pr.number,
-              event: 'APPROVE',
-              body: '🎉 Welcome to the IKPC Town Board! Your entry has been automatically approved.'
-            });
-            
-            // Auto-merge
+            // Auto-merge (approval removed as GitHub Actions cannot approve its own PRs)
             await github.rest.pulls.merge({
               owner: context.repo.owner,
               repo: context.repo.repo,

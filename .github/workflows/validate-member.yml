@@ -22,23 +22,23 @@ jobs:
 
       - name: Check required fields
         run: |
-          node -e "
-          const members = require('./data/members.json');
-          const required = ['name', 'github', 'quote', 'gender'];
+          node -e '
+          const members = require("./data/members.json");
+          const required = ["name", "github", "quote", "gender"];
           let valid = true;
           
           members.forEach((member, i) => {
             required.forEach(field => {
               if (!member[field]) {
-                console.log(\`❌ Member ${i + 1} missing '${field}'\`);
+                console.log("❌ Member " + (i + 1) + " missing \"" + field + "\"");
                 valid = false;
               }
             });
           });
           
           if (!valid) process.exit(1);
-          console.log('✅ All members have required fields');
-          "
+          console.log("✅ All members have required fields");
+          '
 
       - name: Comment on PR
         if: success()
