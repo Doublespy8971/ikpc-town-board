@@ -11,6 +11,33 @@
     "mouth": "neutral",
     "badge": "Maintainer"
   },
+
+  {
+  "name": "Yousef Attia",
+  "github": "yousefayman",
+  "quote": "no risk no fun",
+  "gender": "male",
+  "hairColor": "#2D1B00",
+  "dressColor": "#1A1A1A",
+  "nameColor": "#FFFFFF",
+  "eyes": "wide",
+  "mouth": "smile",
+  "badge": "Newbie"
+  },
+  
+  {
+  "name": "Takunda Maarmba",
+  "github": "maramba-takunda-tapiwa",
+  "quote": "Im here",
+  "gender": "male",
+  "hairColor": "#2b2b2b",
+  "dressColor": "#7a4fb3",
+  "nameColor": "#1f3a5f",
+  "eyes": "sleepy",
+  "mouth": "smile",
+  "badge": "Newbie"
+  },
+  
   {
     "name": "Saifullah Mohammad",
     "github": "Preacher53",
@@ -24,3 +51,4 @@
     "badge": "Marvel"
   }
 ]
+

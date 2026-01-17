@@ -20,6 +20,31 @@ git checkout -b add-my-avatar
 ```
 
 4. **Edit `data/members.json` and add your entry**
+
+Open `data/members.json` - you'll see existing members in an array like this:
+
+```json
+[
+  {
+    "name": "Existing Member",
+    ...
+  },
+  {
+    "name": "Another Member",
+    ...
+  }
+]
+```
+
+⚠️ **IMPORTANT - DO NOT DELETE ANYONE!** 
+
+**Add your entry at the END, before the closing `]`:**
+
+1. Go to the **last member's closing `}`**
+2. Add a **comma `,`** after it
+3. Paste your entry below
+
+**Your entry format:**
 ```json
 {
   "name": "Your Name",
@@ -33,6 +58,22 @@ git checkout -b add-my-avatar
   "mouth": "smile",
   "badge": "Newbie"
 }
+```
+
+**Example - How the file should look after you add yourself:**
+```json
+[
+  {
+    "name": "Existing Member",
+    "github": "existinguser",
+    ...
+  },
+  {
+    "name": "Your Name",
+    "github": "yourusername",
+    ...
+  }
+]
 ```
 
 **Field options:**
@@ -51,7 +92,25 @@ git push origin add-my-avatar
 
 6. **Open a Pull Request**
 
-Go to your fork on GitHub and click **"Compare & pull request"**
+After pushing, go to your fork on GitHub: `https://github.com/YOUR-USERNAME/ikpc-town-board`
+
+You'll see a green **"Compare & pull request"** button - **click it!**
+
+**CHECK THIS:** At the top of the page, make sure it shows:
+
+```
+base: isu-ik-programming-club/ikpc-town-board   main   ←   head: YOUR-USERNAME/ikpc-town-board   add-my-avatar
+```
+
+✅ **Left side must say `main`** - this is where your code goes!  
+✅ **Right side shows your username** and `add-my-avatar`
+
+**If the left doesn't say `main`**: Click that dropdown and select `main`
+
+Add title: `Add [Your Name] to town board`  
+Click the green **"Create pull request"** button
+
+✅ Done! You'll be notified when merged!
 
 ## 💻 Run Locally
 
